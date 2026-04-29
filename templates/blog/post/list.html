@@ -1,18 +1,20 @@
 {% extends "blog/base.html" %}
+{# blogni base.html ini kiydirib olyapti o'ziga  #}
 {% block title %}IT-NEWS{% endblock %}
-
+{#blog larni ichini shu yerda to'ldirsak bo'ladi #}
 {% block content %}
     <h1>IT-NEWS</h1>
     {% for post in posts %}
-        <div class="post">
-            <h2>
+        <div class="post"> {# har bir funcsiya ichida nima bo'lishi #}
+            <h2> {# bu get_abso_url modeldan import qilinyapti #}
                 <a href="{{ post.get_absolute_url }}"> {{ post.title }}</a>
             </h2>
-            <p class="date">
+            <p class="date"> {# har bir funcsiya ichida nima bo'lishi #}
                 Published {{ post.publish }} by {{ post.author }}
             </p>
 
         </div>
     {% endfor %}
     {% include 'paginator.html' with page=page_obj %}
+    {# include bu paginator.html ni qo'shib qo'y degani #}
 {% endblock %}

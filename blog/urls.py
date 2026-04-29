@@ -18,5 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',include('blogapp.urls',namespace='blogapp'))
+    path('',include('blogapp.urls',namespace='blogapp'))
 ]
+
+# uyga vazifa commentdan chiqarib blog app urlini qurish listviewda .listview qilib qo'shib ketish kk
+

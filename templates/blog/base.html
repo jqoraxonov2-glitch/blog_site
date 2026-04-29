@@ -3,11 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+{# bu block lar list.htmlga beriladi u yerda ishlov beriladi #}
+{# title uchun block qoldirildi  nomi => title degan  #}
     <title>{% block title %}{% endblock %}</title>
+{#   cssni ulash link bilan #}
     <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 </head>
 <body>
+{# div ga id beildi  content degan #}
 <div id="content">
+{#yana block ochib yopildi  nomi => content   #}
     {% block content %}
     {% endblock %}
 </div>
